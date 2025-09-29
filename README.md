@@ -46,7 +46,7 @@ DATABASES = {
 
 ***Запуск программы:***
 ```
-python3.13 main.py
+python3.13 manage.py runserver 127.0.0.1:8000
 ```
 ### Результат запуска программы
 ```
