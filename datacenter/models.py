@@ -33,9 +33,9 @@ class Visit(models.Model):
         return delta
 
     def format_duration(duration):
-        delta_string = timedelta(seconds=duration.seconds)
+        delta_string = timedelta(seconds=int(duration.total_seconds()))
         return delta_string
 
     def is_visit_long(visit, minutes=60):
         delta = visit.leaved_at - visit.entered_at
-        return delta.seconds // 60 > minutes
+        return delta.total_seconds() // 60 > minutes
